@@ -1,0 +1,53 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.name {
+  text-align: center;
+  background-color: #e2d810;
+  padding: 10px;
+}
+.form {
+  text-align: center;
+  padding: 20px;
+  background-color:#d9138a;
+}
+.input {
+  width: 200px;
+  height: 25px;
+  text-align: center;
+}
+input::placeholder {
+  color: #12a4d9 ;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+}
+.btn_submit {
+  width: 70px;
+  height: 25px;
+  margin-left: 15px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #12a4d9;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+.task {
+  margin-left: 150px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: #322e2f;
+  font-size: 20px;
+  font-weight: 700;
+}
+.btn_remove {
+  height: 30px;
+  width: 30px;
+  border: 2px solid #12a4d9;
+  border-radius: 50%;
+  margin-left: 20px;
+  background-color: rgb(250, 250, 250);
+  color: #d9138a;
+  font-weight: 900;
+}
