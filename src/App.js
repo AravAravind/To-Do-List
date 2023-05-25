@@ -1,7 +1,8 @@
 import "./styles.css";
 import { useState } from "react";
+
 export default function App() {
-  const [tasks, setTasks] = useState([{}]);
+  const [tasks, setTasks] = useState([]);
   const [value, setValues] = useState("");
 
   function addItem(e) {
@@ -11,18 +12,16 @@ export default function App() {
     setTasks(newTask);
     setValues("");
   }
-  //To remove the values in the list which u don't need.
-  function removeItem(e) {
-    var index = Number(e.target.id);
-    let temp = [...tasks];
-    temp.splice(index, 1);
-    setTasks(temp);
+
+  function removeItem(index) {
+    const newTasks = tasks.filter((task, i) => i !== index);
+    setTasks(newTasks);
   }
 
   return (
     <>
       <div className="name">
-        <h1>TO - DO LIST</h1>
+        <h1>TO-DO LIST</h1>
       </div>
       <div>
         <form className="form" onSubmit={addItem}>
@@ -32,19 +31,23 @@ export default function App() {
             placeholder="Add"
             value={value}
             onChange={(e) => setValues(e.target.value)}
-            />
-            <button className="btn_submit">Submit</button>
-          </form>
-          {tasks.map((item, i) => (
-            <div className="task" key={i} id={i}>
-              {item.text}
-              <button className="btn_remove" onClick={removeItem}>
+          />
+          <button className="btn_submit">Submit</button>
+        </form>
+        {tasks.map((item, index) => (
+          <div className="task" key={index} id={index}>
+            {item.text}
+            {tasks.length > 0 && (
+              <button
+                className="btn_remove"
+                onClick={() => removeItem(index)}
+              >
                 X
               </button>
-            </div>
-          ))}
-        </div>
-      </>
-    );
-  }
-  
+            )}
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
