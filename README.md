@@ -4,7 +4,7 @@
 This is a simple web application that allows you to manage your daily tasks effectively. With this To-Do List app, you can easily add new tasks, mark them as completed, and remove them when they are no longer needed. Stay organized and boost your productivity with this intuitive and user-friendly tool.
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/your-username/to-do-list.git`
+1. Clone the repository: `git clone https://github.com/AravAravind/To-Do-List.git`
 2. Navigate to the project directory: `cd to-do-list`
 3. Install the dependencies: `npm install`
 
