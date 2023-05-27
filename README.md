@@ -5,8 +5,7 @@ This is a simple web application that allows you to manage your daily tasks effe
 
 ## Installation
 1. Clone the repository: `git clone https://github.com/AravAravind/To-Do-List.git`
-2. Navigate to the project directory: `cd to-do-list`
-3. Install the dependencies: `npm install`
+2. Install the dependencies: `npm install`
 
 ## Usage
 1. Start the development server: `npm start`
